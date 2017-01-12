@@ -8,26 +8,28 @@
 	<body>
 
 		<header>
-			<b><u>User</u></b>
+			<strong><span>User</span></strong>
 		</header>
 
 		<ul>
-			<li><b>Name:</b> Dylan aka "TriLLwax"</li>
-			<li><b>Age:</b> 23</li>
-			<li><b>Occupation:</b> Music Producer and DJ</li>
-			<li><b>Technology:</b> MacBook Pro macOS Sierra V 10.12.2</li>
-			<li><b>Needs:</b> Up and coming music producer using SoundCloud as a platform
+			<li><strong>Name:</strong> Dylan aka "TriLLwax"</li>
+			<li><strong>Age:</strong> 23</li>
+			<li><strong>Occupation:</strong> Music Producer and DJ</li>
+			<li><strong>Technology:</strong> MacBook Pro macOS Sierra V 10.12.2</li>
+			<li><strong>Needs:</strong> Up and coming music producer using SoundCloud as a platform
 				to promote and share his music. He needs tools to see who is listening
-				and where they are listening from to better understand his audience.</li>
-			<li><b>Goals:</b> He wants to find his niche market and make it big as a DJ.
+				and where they are listening from to better understand his audience.
+			</li>
+			<li><strong>Goals:</strong> He wants to find his niche market and make it big as a DJ.
 				Once fame is achieved SoundCloud will still be utilized to interact with fans
-				and keep them up to date on his new music.</li>
+				and keep them up to date on his new music.
+			</li>
 		</ul> <!--Bio-->
 
-		<img src="images/Trill Wax.jpg" width="350" height="350"  alt="TriLLwax"><br><br>
+		<img src="images/Trill Wax.jpg" width="350" height="350" alt="TriLLwax"><br><br>
 
 		<header>
-			<b><u>Use Case</u></b>
+			<strong><span>Use Case</span></strong>
 		</header>
 
 		<p>
@@ -41,7 +43,7 @@
 		</p><!--Use Case-->
 
 		<header>
-			<b><u>Interaction Flow</u></b>
+			<strong><span>Interaction Flow</span></strong>
 		</header>
 
 		<ol>
@@ -51,20 +53,23 @@
 			<li class="site">SoundCloud opens the page and gives him the option to upload his music</li>
 			<li class="user">Dylan finds the files then loads them to SoundCloud</li>
 			<li class="site">SoundCloud starts uploading the files and asks him to fill out the
-				information about his music while he waits</li>
+				information about his music while he waits
+			</li>
 			<li class="user">Dylan then inputs the information about the track (title, artist, genre, artwork, etc.)</li>
 			<li class="site">SoundCloud puts the track on his personal profile along with all of the info</li>
 			<li class="user">Dylan shares his music on groups filled with people with interest in similar music to his</li>
-			<li class="site">SoundCloud alerts users in the groups that new music has been posted and keeps track of who plays it</li>
+			<li class="site">SoundCloud alerts users in the groups that new music has been posted and keeps track of who
+				plays it
+			</li>
 			<li class="user">Dylan sees the number of plays climbing in his statistics</li>
 			<li class="user">Dylan is stoked</li>
 		</ol><!--Interaction Flow-->
 
 		<header>
-			<b><u>Entities & Attributes</u></b><br><br>
+			<strong><span>Entities &amp; Attributes</span></strong><br><br>
 		</header>
 
-		<b>Profile</b><br>
+		<strong>Profile</strong><br>
 		<ul>
 			<li>profileId (primary key)</li>
 			<li>profileUser</li>
@@ -74,22 +79,21 @@
 			<li>profileSongs</li>
 		</ul>
 
-		<b>Upload Track</b><br>
+		<strong>Upload Track</strong><br>
 		<ul>
 			<li>uploadAudio (primary key)</li>
-			<li>uploadPlaylist (if uploading multiple files)</li>
-			<li>uploadInformation (title, cover art, genre, etc)</li>
+			<li>uploadTitle</li>
+			<li>uploadCoverArt</li>
+			<li>uploadGenre</li>
+			<li>uploadDescription</li>
 		</ul>
 
 		<header>
-			<b><u>Relations</u></b>
+			<strong><span>Relations</span></strong>
 		</header>
 
 		<ul>
-			<li>One <B>User</B> can have one <b>Profile - (1-1)</b></li>
-			<li>One <b>Profile</b> can have many <b>Uploads - (1-n)</b></li>
-			<li>One <b>Profile</b> can have many <b>Followers - (1-n)</b></li>
-			<li>Many <b>Tracks</b> can have many <b>Likes - (m-n)</b></li>
+			<li>One <strong>Profile</strong> can have many <strong>Uploads - (1-n)</strong></li>
 		</ul>
 
 	</body>
