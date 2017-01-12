@@ -13,7 +13,7 @@
 		</header>
 
 		<ul>
-			<li><b>Name:</b> Dylan</li>
+			<li><b>Name:</b> Dylan aka "TriLLwax"</li>
 			<li><b>Age:</b> 23</li>
 			<li><b>Occupation:</b> Music Producer and DJ</li>
 			<li><b>Technology:</b> MacBook Pro macOS Sierra V 10.12.2</li>
@@ -24,6 +24,8 @@
 				Once fame is achieved SoundCloud will still be utilized to interact with fans
 				and keep them up to date on his new music.</li>
 		</ul>
+
+		<img src="images/Trill Wax.JPG" alt="TriLLwax"><br>
 
 		<header>
 			<b><u>Use Case</u></b>
