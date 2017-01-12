@@ -3,6 +3,7 @@
 
 	<head>
 		<title>SoundCloud User Persona</title>
+		<link href="CSS/underline.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
@@ -49,7 +50,7 @@
 		<ol>
 			<li class="user">Dylan logs onto SoundCloud on his MacBook</li>
 			<li class="site">SoundCloud displays Dylans music stream</li>
-			<li class="user">Dylan navigates to the "Upload" tab</li>
+			<li class="user">Dylan navigates to the upload tab</li>
 			<li class="site">SoundCloud opens the page and gives him the option to upload his music</li>
 			<li class="user">Dylan finds the files then loads them to SoundCloud</li>
 			<li class="site">SoundCloud starts uploading the files and asks him to fill out the
@@ -86,7 +87,7 @@
 			<li>uploadCoverArt</li>
 			<li>uploadGenre</li>
 			<li>uploadDescription</li>
-		</ul>
+		</ul><!--Entities &amp; Attributes-->
 
 		<header>
 			<strong><span>Relations</span></strong>
@@ -94,7 +95,7 @@
 
 		<ul>
 			<li>One <strong>Profile</strong> can have many <strong>Uploads - (1-n)</strong></li>
-		</ul>
+		</ul><!--Relations-->
 
 	</body>
 
