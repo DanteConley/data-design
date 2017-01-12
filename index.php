@@ -25,7 +25,7 @@
 				and keep them up to date on his new music.</li>
 		</ul>
 
-		<img src="images/Trill Wax.JPG" alt="TriLLwax"><br>
+		<img src="images/Trill Wax.jpg" alt="TriLLwax"><br><br>
 
 		<header>
 			<b><u>Use Case</u></b>
