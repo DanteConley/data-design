@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+	<link href="CSS/underline.css" rel="stylesheet" type="text/css"/>
+
 	<head>
 		<title>SoundCloud User Persona</title>
-		<link href="CSS/underline.css" rel="stylesheet" type="text/css"/>
 	</head>
 
 	<body>
