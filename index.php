@@ -22,7 +22,7 @@
 			<li><b>Goals:</b> He wants to find his niche market and make it big as a DJ.
 				Once fame is achieved SoundCloud will still be utilized to interact with fans
 				and keep them up to date on his new music.</li>
-		</ul>
+		</ul> <!--Bio-->
 
 		<img src="images/Trill Wax.jpg" width="350" height="350"  alt="TriLLwax"><br><br>
 
@@ -38,7 +38,7 @@
 			upload his new music along with some "trippy" album artwork his "homie" made. Knowing
 			his tunes are "Dank" he sits back and waits for the numerous e-mails filled with "mad
 			props" and booking requests to pour into his inbox. They do. And he is totally "stoked".
-		</p>
+		</p><!--Use Case-->
 
 		<header>
 			<b><u>Interaction Flow</u></b>
@@ -58,7 +58,49 @@
 			<li class="site">SoundCloud alerts users in the groups that new music has been posted and keeps track of who plays it</li>
 			<li class="user">Dylan sees the number of plays climbing in his statistics</li>
 			<li class="user">Dylan is stoked</li>
-		</ol>
+		</ol><!--Interaction Flow-->
+
+		<header>
+			<b><u>Entities & Attributes</u></b>
+		</header>
+
+	<p>
+		<b>Profile</b><br>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<b>Upload Track</b><br>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<b></b><br>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<header>
+			<b><u>Relations</u></b>
+		</header>
+
+		<ul>
+			<li>One <b>Profile</b> can upload man <b>Songs - (1-n)</b></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</p>
+
 	</body>
 
 </html>
