@@ -5,11 +5,10 @@
 		<title>SoundCloud User Persona</title>
 	</head>
 
-
 	<body>
 
 		<header>
-			<b><u>User Persona</u></b>
+			<b><u>User</u></b>
 		</header>
 
 		<ul>
@@ -25,7 +24,7 @@
 				and keep them up to date on his new music.</li>
 		</ul>
 
-		<img src="images/Trill Wax.jpg" alt="TriLLwax"><br><br>
+		<img src="images/Trill Wax.jpg" width="350" height="350"  alt="TriLLwax"><br><br>
 
 		<header>
 			<b><u>Use Case</u></b>
