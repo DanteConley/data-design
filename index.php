@@ -36,7 +36,7 @@
 			he is happy with the mastered tracks on Ableton, he thinks they're "lit", so he exports
 			the files to his desktop as lossless .wav files. He proceeds to log into SoundCloud and
 			upload his new music along with some "trippy" album artwork his "homie" made. Knowing
-			his tunes are "Dank" he sits back and waits for the numerous e-mails filled with "mad
+			his tunes are "dank" he sits back and waits for the numerous e-mails filled with "mad
 			props" and booking requests to pour into his inbox. They do. And he is totally "stoked".
 		</p><!--Use Case-->
 
@@ -66,18 +66,19 @@
 
 		<b>Profile</b><br>
 		<ul>
-			<li>Profile (artist) Name</li>
-			<li>Profile Location</li>
-			<li>Profile Contact Information</li>
-			<li>Profile Bio</li>
+			<li>profileId (primary key)</li>
+			<li>profileUser</li>
+			<li>profileLocation</li>
+			<li>profileContact</li>
+			<li>profileBio</li>
+			<li>profileSongs</li>
 		</ul>
 
 		<b>Upload Track</b><br>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>uploadAudio (primary key)</li>
+			<li>uploadPlaylist (if uploading multiple files)</li>
+			<li>uploadInformation (title, cover art, genre, etc)</li>
 		</ul>
 
 		<header>
@@ -85,9 +86,10 @@
 		</header>
 
 		<ul>
-			<li>One <b>Profile</b> can upload many <b>Songs - (1-n)</b></li>
-			<li>Many <b>Songs</b> can have many <b>Likes - (m-n)</b></li>
-			<li></li>
+			<li>One <B>User</B> can have one <b>Profile - (1-1)</b></li>
+			<li>One <b>Profile</b> can have many <b>Uploads - (1-n)</b></li>
+			<li>One <b>Profile</b> can have many <b>Followers - (1-n)</b></li>
+			<li>Many <b>Tracks</b> can have many <b>Likes - (m-n)</b></li>
 		</ul>
 
 	</body>
