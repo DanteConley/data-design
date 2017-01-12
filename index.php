@@ -61,27 +61,18 @@
 		</ol><!--Interaction Flow-->
 
 		<header>
-			<b><u>Entities & Attributes</u></b>
+			<b><u>Entities & Attributes</u></b><br><br>
 		</header>
 
-	<p>
 		<b>Profile</b><br>
 		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
+			<li>Profile (artist) Name</li>
+			<li>Profile Location</li>
+			<li>Profile Contact Information</li>
+			<li>Profile Bio</li>
 		</ul>
 
 		<b>Upload Track</b><br>
-		<ul>
-			<li></li>
-			<li></li>
-			<li></li>
-			<li></li>
-		</ul>
-
-		<b></b><br>
 		<ul>
 			<li></li>
 			<li></li>
@@ -94,12 +85,10 @@
 		</header>
 
 		<ul>
-			<li>One <b>Profile</b> can upload man <b>Songs - (1-n)</b></li>
-			<li></li>
-			<li></li>
+			<li>One <b>Profile</b> can upload many <b>Songs - (1-n)</b></li>
+			<li>Many <b>Songs</b> can have many <b>Likes - (m-n)</b></li>
 			<li></li>
 		</ul>
-	</p>
 
 	</body>
 
