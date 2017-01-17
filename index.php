@@ -78,14 +78,15 @@
 			<li>profileLocation</li>
 			<li>profileContact</li>
 			<li>profileBio</li>
-			<li>profileSongs</li>
 		</ul>
 
 		<strong>Upload Track</strong><br>
 		<ul>
-			<li>uploadAudio (primary key)</li>
+			<li>uploadId (primary key)</li>
+			<li>uploadProfileId</li>
+			<li>uploadTrackFileName</li>
 			<li>uploadTitle</li>
-			<li>uploadCoverArt</li>
+			<li>uploadCoverArtFileName</li>
 			<li>uploadGenre</li>
 			<li>uploadDescription</li>
 		</ul><!--Entities &amp; Attributes-->
