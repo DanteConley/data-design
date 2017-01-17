@@ -99,6 +99,8 @@
 			<li>One <strong>Profile</strong> can have many <strong>Uploads - (1-n)</strong></li>
 		</ul><!--Relations-->
 
+		<img src="images/soundcloudERD.svg" alt="soundcloudERD">
+
 	</body>
 
 </html>
