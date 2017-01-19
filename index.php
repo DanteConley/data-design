@@ -76,11 +76,11 @@
 			<li>profileId (primary key)</li>
 			<li>profileUser</li>
 			<li>profileLocation</li>
-			<li>profileContact</li>
+			<li>profileUrl</li>
 			<li>profileBio</li>
 		</ul>
 
-		<strong>Upload Track</strong><br>
+		<strong>Upload</strong><br>
 		<ul>
 			<li>uploadId (primary key)</li>
 			<li>uploadProfileId</li>

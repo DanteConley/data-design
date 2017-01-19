@@ -100,7 +100,7 @@ class Profile //implements \JsonSerializable
 			return;
 		}
 
-		// verify the tweet id is positive
+		// verify the profile id is positive
 		if($newProfileId <= 0) {
 			throw(new \RangeException("profile id is not positive"));
 		}
@@ -123,7 +123,7 @@ class Profile //implements \JsonSerializable
 	 *
 	 * @param string $newProfileUser new value of profile user
 	 * @throws \RangeException if $newProfileUser is not positive
-	 * @throws \TypeError if $newProfileUser is not an integer
+	 * @throws \TypeError if $newProfileUser is not a string
 	 **/
 	public function setProfileUser(string $newProfileUser) {
 		// verify the profile user is positive
@@ -149,7 +149,7 @@ class Profile //implements \JsonSerializable
 	 *
 	 * @param string $newProfileLocation new value of profile location
 	 * @throws \RangeException if $newProfileLocation is not positive
-	 * @throws \TypeError if $newProfileLocation is not an integer
+	 * @throws \TypeError if $newProfileLocation is not a string
 	 **/
 	public function setProfileLocation(string $newProfileLocation) {
 		// verify the profile location is positive
@@ -175,7 +175,7 @@ class Profile //implements \JsonSerializable
 	 *
 	 * @param string $newProfileContact new value of profile contact
 	 * @throws \RangeException if $newProfileContact is not positive
-	 * @throws \TypeError if $newProfileContact is not an integer
+	 * @throws \TypeError if $newProfileContact is not a string
 	 **/
 	public function setProfileContact(string $newProfileContact) {
 		//verify the profile contact is positive
@@ -200,13 +200,13 @@ class Profile //implements \JsonSerializable
 	 * mutator method for profile bio
 	 *
 	 * @param string $newProfileBio new value of profile bio
-	 * @throws \RangeException if $newProfileBio is not positive
-	 * @throws \TypeError $newProfileBio is not an integer
+	 * @throws \RangeException if $newProfileBio is >= 1000
+	 * @throws \TypeError $newProfileBio is not a string
 	 **/
 	public function setProfileBio(string $newProfileBio) {
-		//verify the profile bio is positive
-		if($newProfileBio <=0) {
-			throw(new \RangeException("profile bio is not positive"));
+		//verify the profile bio is less than or equal too 1000
+		if($newProfileBio >=1000) {
+			throw(new \RangeException("profile bio is greater than 1000 characters"));
 		}
 
 		//convert and store the profile bio
