@@ -69,10 +69,121 @@ class Profile //implements \JsonSerializable
 		} catch(\TypeError $typeError) {
 			//rethrow the exception to the caller
 			throw(new \TypeError($typeError->getMessage(), 0, $typeError));
-		}catch(\Exception $exception) {
+		} catch(\Exception $exception) {
 			// rethrow the exception to the caller
 			throw(new \Exception($exception->getMessage(), 0, $exception));
 		}
 	}
+
 	/**
+	 * accessor method for profile id
+	 *
+	 * @return int|null value of profile id
+	 **/
+
+	public function getProfileId() {
+		return ($this->profileId);
+	}
+
+	/**
+	 * mutator method for profile id
+	 *
+	 * @param int|null $newProfileId new value of profile id
+	 * @throws \RangeException if $newProfileId is not positive
+	 * @throws \Type Error if $newProfileId is not an integer
+	 **/
+
+	public function setProfileId(int $newProfileId = null) {
+		// base case: if the profile id is null, this is a new profile without a mySQL assigned id (yet)
+		if($newProfileId === null) {
+			$this->profileId = null;
+			return;
+		}
+
+		// verify the tweet id is positive
+		if($newProfileId <= 0) {
+			throw(new \RangeException("profile id is not positive"));
+		}
+
+		// convert and store the profile id
+		$this->profileId = $newProfileId;
+	}
+
+	/**
+	 * accessor method for profile user
+	 *
+	 * @return string value of profile user
+	 **/
+
+	public function getProfileUser() {
+		return ($this->profileUser);
+	}
+
+	/** mutator method for profile user
+	 *
+	 * @param string $newProfileUser new value of profile user
+	 * @throws \RangeException if $newProfileUser is not positive
+	 * @throws \TypeError if $newProfileUser is not an integer
+	 **/
+	public function setProfileUser(string $newProfileUser) {
+		// verify the profile user is positive
+		if($newProfileUser <= 0) {
+			throw(new \RangeException("profile user is not positive"));
+		}
+
+		// convert and store the profile user
+		$this->profileUser = $newProfileUser;
+	}
+
+	/**
+	 * accessor method for profile location
+	 *
+	 * @return string value of profile location
+	 **/
+	public function getProfileLocation() {
+		return($this->profileLocation);
+	}
+
+	/**
+	 * mutator method for profile location
+	 *
+	 * @param string $newProfileLocation new value of profile location
+	 * @throws \RangeException if $newProfileLocation is not positive
+	 * @throws \TypeError if $newProfileLocation is not an integer
+	 **/
+	public function setProfileLocation(string $newProfileLocation) {
+		// verify the profile location is positive
+		if($newProfileLocation <= 0) {
+			throw(new \RangeException("profile location is not positive"));
+		}
+
+		// convert and store the profile location
+		$this->profileLocation = $newProfileLocation;
+	}
+
+	/**
+	 * accessor method for profile contact
+	 *
+	 * @return string value of profile contact
+	 **/
+	public function getProfileContact() {
+		return($this->profileContact);
+	}
+
+	/**
+	 * mutator method for profile contact
+	 *
+	 * @param string $newProfileContact new value of profile contact
+	 * @throws \RangeException if $newProfileContact is not positive
+	 * @throws \TypeError if $newProfileContact is not an integer
+	 **/
+	public function setProfileContact(string $newProfileLocation) {
+		//verify the profile contact is positive
+		if($newProfileContact <= 0) {
+			throw(new \RangeException("profile contact is not positive"));
+		}
+
+		// convert and store the profile contact
+		$this->profileContact = $newProfileContact;
+	}
 }
