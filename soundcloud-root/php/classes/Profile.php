@@ -90,7 +90,7 @@ class Profile //implements \JsonSerializable
 	 *
 	 * @param int|null $newProfileId new value of profile id
 	 * @throws \RangeException if $newProfileId is not positive
-	 * @throws \Type Error if $newProfileId is not an integer
+	 * @throws \TypeError if $newProfileId is not an integer
 	 **/
 
 	public function setProfileId(int $newProfileId = null) {
@@ -177,7 +177,7 @@ class Profile //implements \JsonSerializable
 	 * @throws \RangeException if $newProfileContact is not positive
 	 * @throws \TypeError if $newProfileContact is not an integer
 	 **/
-	public function setProfileContact(string $newProfileLocation) {
+	public function setProfileContact(string $newProfileContact) {
 		//verify the profile contact is positive
 		if($newProfileContact <= 0) {
 			throw(new \RangeException("profile contact is not positive"));
@@ -186,4 +186,31 @@ class Profile //implements \JsonSerializable
 		// convert and store the profile contact
 		$this->profileContact = $newProfileContact;
 	}
+
+	/**
+	 * accessor method for profile bio
+	 *
+	 * @return string value of profile bio
+	 **/
+	public function getProfileBio() {
+		return($this->profileBio);
+	}
+
+	/**
+	 * mutator method for profile bio
+	 *
+	 * @param string $newProfileBio new value of profile bio
+	 * @throws \RangeException if $newProfileBio is not positive
+	 * @throws \TypeError $newProfileBio is not an integer
+	 **/
+	public function setProfileBio(string $newProfileBio) {
+		//verify the profile bio is positive
+		if($newProfileBio <=0) {
+			throw(new \RangeException("profile bio is not positive"));
+		}
+
+		//convert and store the profile bio
+		$this->profileBio = $newProfileBio;
+	}
+
 }
