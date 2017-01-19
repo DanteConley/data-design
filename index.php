@@ -83,7 +83,6 @@
 		<strong>Upload</strong><br>
 		<ul>
 			<li>uploadId (primary key)</li>
-			<li>uploadProfileId</li>
 			<li>uploadTrackFileName</li>
 			<li>uploadTitle</li>
 			<li>uploadCoverArtFileName</li>
