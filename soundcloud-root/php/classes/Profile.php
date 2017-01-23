@@ -12,8 +12,6 @@ require_once("Profile.php");
  * @version 1.0
  **/
 class Profile implements \JsonSerializable{
-	use ValidateDate;
-
 	/**
 	 * id for this Profile; this is the primary key
 	 * @var int $profileId
