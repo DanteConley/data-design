@@ -11,9 +11,9 @@ require_once("Profile.php");
  * @author Dante Conley <danteconley@icloud.com>
  * @version 1.0
  **/
-class Profile //implements \JsonSerializable
-	//use ValidateDate;
-{
+class Profile implements \JsonSerializable{
+	use ValidateDate;
+
 	/**
 	 * id for this Profile; this is the primary key
 	 * @var int $profileId
@@ -123,15 +123,23 @@ class Profile //implements \JsonSerializable
 	 *
 	 * @param string $newProfileUser new value of profile user
 	 * @throws \RangeException if $newProfileUser is not positive
+	 * @throws \InvalidArgumentException if $newProfileUser is inseure
 	 * @throws \TypeError if $newProfileUser is not a string
 	 **/
 	public function setProfileUser(string $newProfileUser) {
 		// verify the profile user is positive
-		if($newProfileUser <= 0) {
-			throw(new \RangeException("profile user is not positive"));
+		$newProfileUser = trim($newProfileUser);
+		$newProfileUser = filter_var($newProfileUser, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
+		if(empty($newProfileUser) === true) {
+			throw(new \InvalidArgumentException("profile user is insecure or empty"));
 		}
 
-		// convert and store the profile user
+		// verify the user content will fit in the database
+		if($newProfileUser > 35) {
+			throw(new \RangeException("profile user is too large"));
+		}
+
+		// store the profile user
 		$this->profileUser = $newProfileUser;
 	}
 
@@ -141,7 +149,7 @@ class Profile //implements \JsonSerializable
 	 * @return string value of profile location
 	 **/
 	public function getProfileLocation() {
-		return($this->profileLocation);
+		return ($this->profileLocation);
 	}
 
 	/**
@@ -167,7 +175,7 @@ class Profile //implements \JsonSerializable
 	 * @return string value of profile contact
 	 **/
 	public function getProfileContact() {
-		return($this->profileContact);
+		return ($this->profileContact);
 	}
 
 	/**
@@ -193,7 +201,7 @@ class Profile //implements \JsonSerializable
 	 * @return string value of profile bio
 	 **/
 	public function getProfileBio() {
-		return($this->profileBio);
+		return ($this->profileBio);
 	}
 
 	/**
@@ -205,7 +213,7 @@ class Profile //implements \JsonSerializable
 	 **/
 	public function setProfileBio(string $newProfileBio) {
 		//verify the profile bio is less than or equal too 1000
-		if($newProfileBio >=1000) {
+		if($newProfileBio >= 1000) {
 			throw(new \RangeException("profile bio is greater than 1000 characters"));
 		}
 
@@ -213,4 +221,14 @@ class Profile //implements \JsonSerializable
 		$this->profileBio = $newProfileBio;
 	}
 
+
+	/**
+	 * formats the state variables for JSON serialization
+	 *
+	 * @return array resulting state variables to serialize
+	 **/
+	public function jsonserialize() {
+		$fields = get_object_vars($this);
+		return ($fields);
+	}
 }

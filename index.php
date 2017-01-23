@@ -23,7 +23,7 @@
 				and where they are listening from to better understand his audience.
 			</li>
 			<li><strong>Goals:</strong> He wants to find his niche market and make it big as a DJ.
-				Once fame is achieved SoundCloud will still be utilized to interact with fans
+				Once fame is achieved, SoundCloud will still be utilized to interact with fans
 				and keep them up to date on his new music.
 			</li>
 		</ul> <!--Bio-->
